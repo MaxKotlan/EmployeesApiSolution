@@ -1,13 +1,13 @@
 version: "3"
 services:
-  api:
-    image: jeffrygonzalez/employeesapi:sep21
-    ports: 
-      - 80:80
-    environment: 
-      - nodeApi=http://node:3000
-      - ConnectionStrings__employees=server=sql;database=employees_docker;user=sa;password=TokyoJoe138!
-      - flags:future="true"
+  # api:
+  #   image: jeffrygonzalez/employeesapi:sep21
+  #   ports: 
+  #     - 80:80
+  #   environment: 
+  #     - nodeApi=http://node:3000
+  #     - ConnectionStrings__employees=server=sql;database=employees_docker;user=sa;password=TokyoJoe138!
+  #     - flags:future="true"
 
   node:
     image: jeffrygonzalez/node-api-on-call:2
