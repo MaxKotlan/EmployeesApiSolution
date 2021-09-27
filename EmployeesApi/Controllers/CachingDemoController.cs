@@ -10,10 +10,17 @@ namespace EmployeesApi.Controllers
     {
 
         [HttpGet("/cached")]
+        [ResponseCache(Location = ResponseCacheLocation.Any,Duration = 5)]
         public async Task<ActionResult> GetSomeSlowStuff()
         {
             await Task.Delay(3000);
-            return Ok(new { data = "Your Stuff Here" });
+            return Ok(new { data = "Your Stuff Here.", when=DateTime.Now });
+        }
+
+        [HttpGet("/cached2")]
+        public async Task<ActionResult> ServerObjectCaching()
+        {
+            return Ok(); // TODO: Write some code here.
         }
     }
 }

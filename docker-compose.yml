@@ -18,3 +18,8 @@ services:
     image: jeffrygonzalez/sqlfor-employees:sep21
     ports:
       - 1433:1433
+
+  cache:
+    image: redis:latest
+    ports: 
+      - 6379:6379
