@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EmployeesApi.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,13 @@ namespace EmployeesApi.Controllers
 {
     public class CachingDemoController : ControllerBase
     {
+
+        private readonly ILookupPricing _pricing;
+
+        public CachingDemoController(ILookupPricing pricing)
+        {
+            _pricing = pricing;
+        }
 
         [HttpGet("/cached")]
         [ResponseCache(Location = ResponseCacheLocation.Any,Duration = 5)]
@@ -20,7 +28,8 @@ namespace EmployeesApi.Controllers
         [HttpGet("/cached2")]
         public async Task<ActionResult> ServerObjectCaching()
         {
-            return Ok(); // TODO: Write some code here.
+            var price = await _pricing.GetPricingAsync();
+            return Ok($"Today's Pricing is ${price:c}"); // TODO: Write some code here.
         }
     }
 }
