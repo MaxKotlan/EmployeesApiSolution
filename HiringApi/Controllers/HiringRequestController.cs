@@ -1,4 +1,5 @@
 ﻿using HiringApi.Models;
+using HiringApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,13 @@ namespace HiringApi.Controllers
 {
     public class HiringRequestController : ControllerBase
     {
+        private readonly IHireEmployees _employeeHiringService;
+
+        public HiringRequestController(IHireEmployees employeeHiringService)
+        {
+            _employeeHiringService = employeeHiringService;
+        }
+
         [HttpPost("hiring-requests")]
         public async Task<ActionResult> AddHiringRequest([FromBody] PostHiringRequest request)
         {
@@ -17,13 +25,14 @@ namespace HiringApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            // Save it (for us, to a database) 
-            // return a reponse
-            //   201 Created
-            //   Location with the url of the new thing.
-            //   Send them a copy of it.
-            await Task.Delay(3000);
-            return Ok(request);
+
+     
+
+            GetHiringResponse response = await _employeeHiringService.HireAsync(request);
+           
+
+          //  await Task.Delay(3000);
+            return Ok(response);
         }
     }
 }
