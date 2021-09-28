@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesApi", "EmployeesAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesApiIntegrationTests", "EmployeesApiIntegrationTests\EmployeesApiIntegrationTests.csproj", "{0360F8D8-BCF0-415F-ACFC-179AEBE79AF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheClient", "CacheClient\CacheClient.csproj", "{F90D7EFF-B67A-4BE4-821C-E75DEA59E422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheClient", "CacheClient\CacheClient.csproj", "{F90D7EFF-B67A-4BE4-821C-E75DEA59E422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingService", "PricingService\PricingService.csproj", "{9EFC10D0-951F-4398-9388-0AD79663854B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PricingService", "PricingService\PricingService.csproj", "{9EFC10D0-951F-4398-9388-0AD79663854B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiringApi", "HiringApi\HiringApi.csproj", "{7C8E0740-7CDD-49D5-93E0-0E5A1A96D65F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9EFC10D0-951F-4398-9388-0AD79663854B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EFC10D0-951F-4398-9388-0AD79663854B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EFC10D0-951F-4398-9388-0AD79663854B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8E0740-7CDD-49D5-93E0-0E5A1A96D65F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8E0740-7CDD-49D5-93E0-0E5A1A96D65F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8E0740-7CDD-49D5-93E0-0E5A1A96D65F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8E0740-7CDD-49D5-93E0-0E5A1A96D65F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
